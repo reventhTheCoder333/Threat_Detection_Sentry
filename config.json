@@ -1,0 +1,16 @@
+{
+    "base_model": "distilbert-base-uncased",
+    "task": "threat_language_detection",
+    "labels": {
+        "0": "SAFE",
+        "1": "THREAT"
+    },
+    "architecture": {
+        "transformer": "DistilBERT",
+        "hidden_size": 768,
+        "classifier": "Linear(768, 2)"
+    },
+    "max_length": 64,
+    "distilbert_frozen": true,
+    "description": "Sentry threat language detector. DistilBERT generates a 768-dimensional CLS representation, which is passed through a linear classifier to predict SAFE or THREAT."
+}
